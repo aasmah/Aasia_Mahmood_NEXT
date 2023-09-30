@@ -38,7 +38,7 @@ function CheckoutForm() {
     // get token back from stripe to process credit card
     // const API_URL =     process.env.NEXT_PUBLIC_API_URL || "https://urchin-app-hi2hs.ondigitalocean.app";
     const API_URL = "https://urchin-app-hi2hs.ondigitalocean.app";
-    
+
     const token = await stripe.createToken(cardElement);
     const userToken = Cookies.get("token");
     const response = await fetch(`${API_URL}/orders`, {
@@ -53,7 +53,7 @@ function CheckoutForm() {
         token: token.token.id,
       }),
     });
-    //redirect back to home page for restaurance selection
+    //redirect back to home page for restaurant selection
     Router.push("/");
     if (!response.ok) {
       setError(response.statusText);

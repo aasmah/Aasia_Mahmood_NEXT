@@ -38,7 +38,7 @@ function Login(props) {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-             <img src="http://localhost:1337/uploads/food-app-icon-0.jpg" width= {90} height= {90}/>
+             <img src="https://urchin-app-hi2hs.ondigitalocean.app/uploads/e98c2d51d2b24d08a390bd71822f86f3.jpg" width= {90} height= {90}/>
             </div>
             <div><h2>login</h2></div>
             <section className="wrapper">
