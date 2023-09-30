@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 #Next-React Frontend for Restaurants in full rendering
 <img src = 'frontend rendering.JPG'>
-=======
+
 #Next-React Frontend for Restaurants
 in full rendering
  ![restaurants](https://github.com/aasmah/Restaurant-frontend-backend/assets/35153854/9afd7cb1-e4a9-4340-803b-3b3df7bea9d3)
