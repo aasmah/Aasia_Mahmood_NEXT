@@ -26,7 +26,7 @@ const Register = () => {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-            <img src="https://urchin-app-hi2hs.ondigitalocean.app/admin/plugins/upload/food-app-icon-0.jpg" width= {90} height= {90}/>
+            <img src="https://urchin-app-hi2hs.ondigitalocean.app/uploads/e98c2d51d2b24d08a390bd71822f86f3.jpg" width= {90} height= {90}/>
             <h2>Register</h2>
             </div>
             <section className="wrapper">

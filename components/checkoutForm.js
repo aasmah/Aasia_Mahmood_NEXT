@@ -53,7 +53,9 @@ function CheckoutForm() {
         token: token.token.id,
       }),
     });
-    //redirect back to home page for restaurant selection
+    //redirect back to home page for restaurant selection reset cart
+    const cart = useContext(appContext);
+    cart = { items:[], total:0};
     Router.push("/");
     if (!response.ok) {
       setError(response.statusText);
