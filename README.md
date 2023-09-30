@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-#Next-React Frontend for Restaurants in full rendering
-<img src = 'frontend rendering.JPG'>
-=======
+
 #Next-React Frontend for Restaurants
 in full rendering
  ![restaurants](https://github.com/aasmah/Restaurant-frontend-backend/assets/35153854/9afd7cb1-e4a9-4340-803b-3b3df7bea9d3)
-'restaurants.png'>
->>>>>>> ca2b1be2f5de09036d2f991e4d000e0bbc083fcb
 
 ## use yarn and then yarn dev to run the code
 
 Do NOT do a yarn build
-<<<<<<< HEAD
 
-=======
-index3.js (Data is hardcoded)
->>>>>>> ca2b1be2f5de09036d2f991e4d000e0bbc083fcb
+index.js (Data is hardcoded)
 index.js (Get data from Strapi using Apollo and GraphQL)
 restaurantList.js is Web Component to render restaurants
 

@@ -6,8 +6,7 @@ import Cookie from "js-cookie";
 import axios from "axios";
 
 const API_URL = "https://urchin-app-hi2hs.ondigitalocean.app";
-// const API_URL =  
-//     process.env.NEXT_PUBLIC_API_URL || "https://urchin-app-hi2hs.ondigitalocean.app";
+// const API_URL =  process.env.NEXT_PUBLIC_API_URL || "https://urchin-app-hi2hs.ondigitalocean.app";//
 
 //register a new user
 export const registerUser = (username, email, password) => {
