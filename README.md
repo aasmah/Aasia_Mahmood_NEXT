@@ -7,18 +7,12 @@
 
 ![register attributes](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/e16d137e-313b-4159-a7bf-138ea6ab9d22)
 
-
 ## login
 
 ![login page](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/49e02f66-c6b6-4f4b-bbe5-d1c63ce8e207)
 
-
 ## checkout
 ![checkout](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/fea64a81-7e23-4b5a-96ba-771a5280fb8e)
-
-
-
-
 
 ## use yarn and then yarn dev to run the code
 
@@ -66,6 +60,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Running with Docker
 
 Before dockerizing the application and running the restaurantapp with the Dockerfile and docker-compose.yml, you will need to create your own .env file with credentials for strapi and mongodb. An example of what that file could look like is in env.txt file. 
+
 ![envs](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/b639fdfc-d8fc-45d6-a781-ab53da6d7095)
 
 ## Future developments
