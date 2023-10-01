@@ -1,9 +1,7 @@
-import {gql,useQuery} from '@apollo/client';
-import Dishes from "./dishes"
-import {useContext, useState} from 'react';
-
-
-import AppContext from "./context"
+import { gql, useQuery } from '@apollo/client';
+import Dishes from "./dishes";
+import { useContext, useState } from 'react';
+import AppContext from "./context";
 import {
   Button,
   Card,
@@ -13,12 +11,13 @@ import {
   CardTitle,
   Container,
   Row,
-  Col} from "reactstrap";
+  Col
+} from "reactstrap";
 
-function RestaurantList(props){
-  const[restaurantID, setRestaurantID] = useState(0)
-  const {cart } = useContext(AppContext);
-  const [state, setState] = useState(cart)
+function RestaurantList(props) {
+  const [restaurantID, setRestaurantID] = useState(0);
+  const { cart } = useContext(AppContext);
+  const [state, setState] = useState(cart);
   const GET_RESTAURANTS = gql`
     query {
       restaurants {
@@ -31,61 +30,61 @@ function RestaurantList(props){
       }
     }
   `;
-  const { loading, error, data } = useQuery(GET_RESTAURANTS)
+  const { loading, error, data } = useQuery(GET_RESTAURANTS);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>ERROR</p>;
   if (!data) return <p>Not found</p>;
-  console.log(`Query Data: ${data.restaurants}`)
 
+  let searchQuery = data.restaurants.filter((res) => {
+    return res.name.toLowerCase().includes(props.search);
+  });
 
-let searchQuery = data.restaurants.filter((res) =>{
-    return res.name.toLowerCase().includes(props.search)
-  })
+  let restId = searchQuery[0].id;
 
-let restId = searchQuery[0].id
- 
-// definet renderer for Dishes
+  // Define renderer for Dishes
   const renderDishes = (restaurantID) => {
-    return (<Dishes restId={restaurantID}> </Dishes>)
+    return (<Dishes restId={restaurantID}></Dishes>);
   };
-if(searchQuery.length > 0){
-  const restList = searchQuery.map((res) => (
-    <Col xs="6" sm="4" key={res.id}>
-      <Card style={{ margin: "0 0.5rem 20px 0.5rem" }}>
-        <CardImg
-          top={true}
-          style={{ height: 100 }}
-          src={'https://urchin-app-hi2hs.ondigitalocean.app/'+ res.image.url
-          }
-        />
-        <CardBody>
-          <CardText>{res.description}</CardText>
-        </CardBody>
-        <div className="card-footer">
-        
-        <Button color="info" onClick={()=> setRestaurantID(res.id)}>{res.name}</Button>
-         
-        </div>
-      </Card>
-    </Col>
-  ))
 
-  return(
+  if (searchQuery.length > 0) {
+    const restList = searchQuery.map((res) => (
+      <Col xs="20" sm="6" md="4" lg="3" key={res.id}>
+        <Card className="restaurant-card" style={{ backgroundColor: "grey", color: "white" }}>
+          <CardImg
+            top={true}
+            className="restaurant-image"
+            src={'https://urchin-app-hi2hs.ondigitalocean.app/' + res.image.url}
+            style={{ height: "200px", objectFit: "fill" }} // Set the image size
+          />
+          <CardBody style={{ padding: "10px", borderRadius: "5px" }}>
+            <CardTitle className="restaurant-title" style={{ fontSize: "90%", color: "black", background: "lightgray", padding: "10px" }}>
+              {res.name}
+            </CardTitle>
+            <CardText className="restaurant-description" style={{ fontSize: "90%", color: "black" }}>
+              {res.description}
+            </CardText>
+            <Button
+              color="grey" // Change color to "grey"
+              onClick={() => setRestaurantID(res.id)}
+              className="restaurant-button"
+              style={{ backgroundColor: "black", color: "white", fontSize: "90%" }}
+            >
+              View Menu
+            </Button>
+          </CardBody>
+        </Card>
+      </Col>
+    ));
 
-    <Container>
-    <Row xs='3'>
-      {restList}
-    </Row>
-  
-    <Row xs='3'>
-    {renderDishes(restaurantID)}
-    </Row>
- 
-    </Container>
- 
-  )
-} else {
-  return <h1> No Restaurants Found</h1>
+    return (
+      <Container>
+        <Row>{restList}</Row>
+        <Row>{renderDishes(restaurantID)}</Row>
+      </Container>
+    );
+  } else {
+    return <h1>No Restaurants Found</h1>;
+  }
 }
-}
-   export default RestaurantList
+
+export default RestaurantList;

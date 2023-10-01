@@ -8,6 +8,7 @@ import AppContext from "./context";
 import Cookies from "js-cookie";
 import Router from "next/router";
 
+
 function CheckoutForm() {
   const [data, setData] = useState({
     address: "",
@@ -29,7 +30,7 @@ function CheckoutForm() {
 
   async function submitOrder() {
     // event.preventDefault();
-
+    
     // // Use elements.getElement to get a reference to the mounted Element.
     const cardElement = elements.getElement(CardElement);
 
@@ -53,13 +54,18 @@ function CheckoutForm() {
         token: token.token.id,
       }),
     });
-    //redirect back to home page for restaurant selection reset cart
-    const cart = useContext(appContext);
-    cart = { items:[], total:0};
-    Router.push("/");
+    //Upon success redirect back to home page for restaurant selection reset cart
+    if (response.ok)
+    {
+      alert("Order succesful - bon apetit!");
+      appContext.cart = { items: [], total: 0 };
+      Router.push("/");
+    }    
     if (!response.ok) {
-      setError(response.statusText);
-      console.log("SUCCESS")
+    setError(response.statusText);
+    alert("something went wrong!")
+    console.log("Order submission failed")
+    // 
     }
 
     // OTHER stripe methods you can use depending on app
@@ -79,20 +85,19 @@ function CheckoutForm() {
 
   return (
     <div className="paper">
-      <h5>Your information:</h5>
+    
+    <h5>Your information:</h5>
       <hr />
       <FormGroup style={{ display: "flex" }}>
-        <div style={{ flex: "0.90", marginRight: 10 }}>
+        <div style={{ flex: "0.9", marginRight: "2%" }}>
           <Label>Address</Label>
           <Input name="address" onChange={onChange} />
         </div>
-      </FormGroup>
-      <FormGroup style={{ display: "flex" }}>
-        <div style={{ flex: "0.65", marginRight: "6%" }}>
+        <div style={{ flex: "0.4", marginRight: "2%" }}>
           <Label>City</Label>
           <Input name="city" onChange={onChange} />
         </div>
-        <div style={{ flex: "0.25", marginRight: 0 }}>
+        <div style={{ flex: "0.1" }}>
           <Label>State</Label>
           <Input name="state" onChange={onChange} />
         </div>
