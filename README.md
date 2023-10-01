@@ -1,7 +1,8 @@
 
 #Next-React Frontend for Restaurants
 in full rendering
- ![restaurants](https://github.com/aasmah/Restaurant-frontend-backend/assets/35153854/9afd7cb1-e4a9-4340-803b-3b3df7bea9d3)
+
+
 
 ## use yarn and then yarn dev to run the code
 
@@ -38,7 +39,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easie![towntantalize](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/2![login page](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/1ab5014a-d1cb-4d90-ba5f-ea65feb533fc)
+![checkout](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/fea64a81-7e23-4b5a-96ba-771a5280fb8e)
+![register attributes](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/e16d137e-313b-4159-a7bf-138ea6ab9d22)
+c02cd31-daae-42e7-abf5-c46efe66a93f)
+st way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
