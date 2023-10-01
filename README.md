@@ -1,6 +1,6 @@
 # Welcome to my restaurant app TownTantalize
 
- full rendering
+
 ![towntantalize](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/095aca76-d380-447f-b348-be3ca3abcd0e)
 
 ## Register
