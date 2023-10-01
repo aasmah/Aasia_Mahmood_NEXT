@@ -1,6 +1,22 @@
 
 #Next-React Frontend for Restaurants
 in full rendering
+![towntantalize](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/095aca76-d380-447f-b348-be3ca3abcd0e)
+
+## Register
+
+![register attributes](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/e16d137e-313b-4159-a7bf-138ea6ab9d22)
+
+
+## login
+
+
+
+
+## checkout
+![checkout](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/fea64a81-7e23-4b5a-96ba-771a5280fb8e)
+
+
 
 
 
@@ -39,10 +55,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easie![towntantalize](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/2![login page](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/1ab5014a-d1cb-4d90-ba5f-ea65feb533fc)
-![checkout](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/fea64a81-7e23-4b5a-96ba-771a5280fb8e)
-![register attributes](https://github.com/aasmah/Aasia_Mahmood_NEXT/assets/35153854/e16d137e-313b-4159-a7bf-138ea6ab9d22)
-c02cd31-daae-42e7-abf5-c46efe66a93f)
+The easie
+
 st way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
